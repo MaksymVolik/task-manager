@@ -8,7 +8,7 @@ const port = 3000;
 app.use(bodyParser.json());
 
 app.listen(port, () => {
-  console.log(
-    `Server listening on port ${port} and starting at http://localhost:${port}`
-  );
+    console.log(
+        `Server listening on port ${port} and starting at http://localhost:${port}`
+    );
 });
