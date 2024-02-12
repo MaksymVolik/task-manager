@@ -3,8 +3,6 @@ import swaggerUI from "swagger-ui-express";
 import { SwaggerUIBundle, SwaggerUIStandalonePreset } from "swagger-ui-dist";
 
 const options = {
-    customCssUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.11.3/swagger-ui.min.css",
     definition: {
         openapi: "3.0.0",
         info: {

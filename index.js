@@ -16,6 +16,11 @@ app.use(bodyParser.json());
 app.use("/api", authRouter);
 app.use("/api", taskRouter);
 
+app.use("*.css", (req, res, next) => {
+    res.set("Content-Type", "text/css");
+    next();
+});
+
 swaggerDocs(app);
 
 app.listen(port, () => {
