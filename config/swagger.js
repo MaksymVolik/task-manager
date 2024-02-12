@@ -22,13 +22,17 @@ const options = {
     apis: ["./routes/*.js", "./models/*.js"],
 };
 
-const swaggerSpec = swaggerJSDoc(options, {
-    customCssUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.6.3/swagger-ui.min.css",
-});
+const swaggerSpec = swaggerJSDoc(options);
 
 const swaggerDocs = (app) => {
-    app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
+    app.use(
+        "/docs",
+        swaggerUI.serve,
+        swaggerUI.setup(swaggerSpec, {
+            customCssUrl:
+                "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.6.3/swagger-ui.min.css",
+        })
+    );
     app.get("/docs.json", (req, res) => {
         res.setHeader("Content-Type", "application/json");
         res.send(swaggerSpec);
