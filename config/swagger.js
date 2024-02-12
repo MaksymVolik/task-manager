@@ -2,6 +2,7 @@ import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUI from "swagger-ui-express";
 
 const options = {
+    customCssUrl: "/public/css/swagger-ui.css",
     definition: {
         openapi: "3.0.0",
         info: {
