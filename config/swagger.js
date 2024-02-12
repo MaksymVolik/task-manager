@@ -1,6 +1,6 @@
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUI from "swagger-ui-express";
-// import { SwaggerUIBundle, SwaggerUIStandalonePreset } from "swagger-ui-dist";
+import { SwaggerUIBundle, SwaggerUIStandalonePreset } from "swagger-ui-dist";
 
 const options = {
     definition: {
