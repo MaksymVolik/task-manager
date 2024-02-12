@@ -1,9 +1,7 @@
 import mongoose from "mongoose";
-import { DB_password } from "./secret.js";
+import "dotenv/config";
 
-const URI =
-    process.env.MONGODB_CONNECT_URI ||
-    `mongodb+srv://maksymvolik:${DB_password}@cluster0.qaxwyrs.mongodb.net/?retryWrites=true&w=majority`;
+const URI = process.env.MONGODB_CONNECT_URI;
 
 mongoose
     .connect(URI)
