@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
-import "dotenv/config";
+import dotenv from "dotenv";
+dotenv.config({ path: [".env.local", ".env"] });
 
-const URI = process.env.MONGODB_CONNECT_URI;
+const URI = process.env.MONGODB_URI;
 
 mongoose
     .connect(URI)

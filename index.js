@@ -7,8 +7,6 @@ import swaggerDocs from "./config/swagger.js";
 import authRouter from "./routes/authRoutes.js";
 import taskRouter from "./routes/taskRoutes.js";
 
-import "dotenv/config";
-
 const app = express();
 const port = process.env.PORT || 3000;
 
